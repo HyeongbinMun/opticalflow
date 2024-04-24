@@ -10,7 +10,7 @@
 
 ## How to Build
 ```shell
-git clone [https://${PERSONAL_TOKEN}@github.com/${GithubID}/EDC-frontend.git](https://github.com/HyeongbinMun/opticalflow.git)
+git clone https://github.com/HyeongbinMun/opticalflow.git
 cd opticalflow
 vi docker-compose.yml
 # 포트 포워딩 변경
