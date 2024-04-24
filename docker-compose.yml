@@ -1,0 +1,36 @@
+version: '2.3'
+  
+services:
+  main:
+    container_name: optical-flow
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    runtime: nvidia
+    restart: always
+    env_file:
+      - "docker-compose-env/main.env"
+    volumes:
+      - type: volume
+        source: nfs_shared
+        target: /nfs_shared
+        volume:
+          nocopy: true
+      - "/DATA/data:/data"
+    expose:
+      - "8000"
+    ports:
+      - "35000:22"
+      - "35001:6006"
+      - "35002:8000"
+      - "35003:8888"
+    ipc: host
+    stdin_open: true
+    tty: true
+
+volumes:
+  nfs_shared:
+    driver_opts:
+      type: "nfs"
+      o: "addr=mldisk2.sogang.ac.kr,nolock,soft,rw"
+      device: ":/volume1/nfs_shared"
