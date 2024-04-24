@@ -52,4 +52,4 @@ jupyter notebook            # 주피터노트북 실행
 cd ${jupyter log directory}                          # 텐서보드 로그 위치로 이동
 tensorboard --logdir=./ --port=6006 --bind_all       # 텐서보드 실행
 ```
-* 웹브라우저에서 ```http://${SERVER_IP}:${8888 PORT}/```으로 접속 가능
+* 웹브라우저에서 ```http://${SERVER_IP}:${6006 PORT}/```으로 접속 가능
