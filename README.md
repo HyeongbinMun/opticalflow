@@ -10,7 +10,6 @@
 git clone [https://${PERSONAL_TOKEN}@github.com/${GithubID}/EDC-frontend.git](https://github.com/HyeongbinMun/opticalflow.git)
 cd opticalflow
 vi docker-compose.yml
-```shell
 # 포트 포워딩 변경
     ports:
       - "35000:22"     # ssh port
