@@ -17,7 +17,6 @@ vi docker-compose.yml
       - "35001:6006"   # tensorboard port
       - "35002:8000"   # jupyter notebook port
       - "35003:8888"   # web port
-```
 docker-compose up -d   # 도커 컨데이너 생성
 ```
 
